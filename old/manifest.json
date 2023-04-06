@@ -1,0 +1,11 @@
+{
+    "name": "Create your Secret",
+    "version": "1.0.0",
+    "description": "Keys generator",
+    "manifest_version": 3,
+    "author": "Riccardo La Malfa",
+    "action":{
+        "default_popup": "index.tsx",
+        "default_title": "Secret generator"
+    }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login</title>
+    <meta charset="utf-8">
+    <script src="./src/Script.js"></script>
+    <link rel="manifest" href="./src/manifest.json">
+    <script type="module" src="./src/secret.json"></script>
+</head>
+
+<body class="container mt-3" style="width: 450px;">
+    <thead>Login</thead>
+    <tbody>
+        <tr>
+            <p>User</p>
+            <input type="email" id="user">
+        </tr>
+        <tr>
+            <p>Password</p>
+            <input type="password" id="pass">
+        </tr>
+        <br>
+        <tr>
+            <button type="submit" onclick={clicked()}>Login</button>
+        </tr>
+    </tbody>
+</body>
+
+<script>
+    var data;
+
+fetch('https://server.com/data.json')
+    .then((response) => response.json())
+    .then(response =>{ data = JSON.stringify(response)})
+    .then(console.log(data))
+
+function clicked() {
+    const user = document.getElementById('user').value;
+    const pass = document.getElementById('pass').value;
+/*     data.user = user;
+    data.password = pass;
+    console.log(user, pass) */
+}
+
+const secret = Math.round(Math.random() * 100000000);
+console.log(secret, data);
+//encrypt(algorithm, key, data)
+</script>
+
+</html>
